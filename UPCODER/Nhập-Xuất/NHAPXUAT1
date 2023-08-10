@@ -6,6 +6,6 @@ public class Main {
         int soNguyen = input.nextInt();
         System.out.println(soNguyen%10);
         System.out.println(soNguyen/100);
-        System.out.println((soNguyen/10)%10);
+        System.out.print((soNguyen/10)%10);
     }
 }
