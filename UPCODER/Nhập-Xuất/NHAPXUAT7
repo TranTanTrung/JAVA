@@ -4,7 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double soThuc = scanner.nextDouble();
-        // Làm tròn lên
-        System.out.println((double) Math.round(soThuc *1000)/1000);
+        soThuc = (double) Math.round(soThuc *1000)/1000;
+
+        String format = String.format("%.3f", soThuc);
+
+        System.out.print(format);
     }
 }
