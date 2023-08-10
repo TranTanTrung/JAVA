@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen1 = scanner.nextInt();
+        int soNgueyn2 = scanner.nextInt();
+        int soNguyen3 = scanner.nextInt();
+        int maxTam = Math.max(soNguyen1, soNgueyn2);
+        int minTam = Math.min(soNguyen1, soNgueyn2);
+        System.out.print(Math.max(maxTam, soNguyen3) + " " + Math.min(minTam, soNguyen3));
+    }
+}
