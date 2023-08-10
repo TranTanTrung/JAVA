@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int soNguyen = input.nextInt();
+        System.out.println(soNguyen%10);
+        System.out.println(soNguyen/100);
+        System.out.println((soNguyen/10)%10);
+    }
+}
