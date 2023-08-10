@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình tính VND từ USD
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Mời bạn nhập số USD");
+        double usd = scanner.nextDouble();
+        System.out.println("SỐ tiền Việt Nam bạn nhận được là = " + (usd * 23743.5));
+    }
+}
