@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double soThuc = scanner.nextDouble();
+        // Làm tròn lên
+        System.out.println((double) Math.round(soThuc *1000)/1000);
+    }
+}
