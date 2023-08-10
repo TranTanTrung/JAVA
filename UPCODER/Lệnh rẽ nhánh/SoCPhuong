@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen = scanner.nextInt();
+        double check = Math.sqrt(soNguyen);
+        check = (int)check;
+        if(check*check==soNguyen){
+            System.out.println("yes");
+        } else{
+            System.out.println("no");
+        }
+    }
+}
