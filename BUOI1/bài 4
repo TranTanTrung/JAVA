@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình tính diện tích hình vuông
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Mời bạn nhập cạnh hình vuông");
+        double canhHinhVuong = scanner.nextDouble();
+        System.out.println("Diện tích hình vuông = " + (Math.pow(canhHinhVuong,2)));
+    }
+}
