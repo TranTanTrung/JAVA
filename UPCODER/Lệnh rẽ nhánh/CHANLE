@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen = scanner.nextInt();
+        if(soNguyen%2==0){
+            System.out.println("chan");
+        }else{
+            System.out.println("le");
+        }
+    }
+}
