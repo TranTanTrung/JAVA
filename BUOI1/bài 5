@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình tính diện tích hình tròn
+        Scanner scanner  = new Scanner(System.in);
+        System.out.println("Mời bạn nhập đường kính hình tròn");
+        double duongKinh = scanner.nextDouble();
+        double banKinh = duongKinh/2;
+        System.out.println("Diện tích hình tròn bằng = " + (Math.PI * Math.pow(banKinh, 2)));
+    }
+}
