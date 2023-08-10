@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình tính điểm trung bình 3 môn toán lý hóa
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Mời bạn nhập điểm môn toán");
+        double toan = scanner.nextDouble();
+        System.out.println("Mời bạn nhập điểm môn lý");
+        double ly = scanner.nextDouble();
+        System.out.println("Mời bạn nhập điểm môn hóa");
+        double hoa = scanner.nextDouble();
+        double diemTrungBinh = (toan+ly+hoa)/3;
+        System.out.println("Điểm trung bình ba môn toán, lý, hóa = " + diemTrungBinh);
+    }
+}
