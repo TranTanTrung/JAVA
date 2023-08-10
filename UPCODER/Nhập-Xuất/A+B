@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /*Tính  a + b
+            Input
+            Nhập vào 2 số nguyên a và b.
+            Output
+            xuất ra tổng của 2 số a và b
+        */
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(a+b);
+    }
+}
