@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen1 = scanner.nextInt();
+        int soNgueyn2 = scanner.nextInt();
+        int soNguyen3 = scanner.nextInt();
+        int soNgueyn4 = scanner.nextInt();
+        int soNguyen5 = scanner.nextInt();
+        int max1 = Math.max(soNguyen1, soNgueyn2);
+        int max2 = Math.max(soNguyen3, soNgueyn4);
+        int max3 = Math.max(max1, max2);
+        System.out.println(Math.max(max3, soNguyen5));
+    }
+}
