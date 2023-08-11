@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int max = n%10;
+        int min = n%10;
+        n/=10;
+        while(n>0){
+            int tmp=n%10;
+            if(max<tmp){
+                max=tmp;
+            }
+            if(min>tmp){
+                min=tmp;
+            }
+            n/=10;
+        }
+        System.out.println(max+min);
+    }
+}
