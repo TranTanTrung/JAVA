@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        if(n%3==0){
+            System.out.println(n + " chia het cho 3");
+        } else if (n%3==1) {
+            System.out.println(n + " chia 3 du 1");
+        }else{
+            System.out.println(n + " chia 3 du 2");
+        }
+    }
+}
