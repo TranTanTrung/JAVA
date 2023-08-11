@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int vangVN = scanner.nextInt();
+        int bacVN = scanner.nextInt();
+        int dongVN = scanner.nextInt();
+
+        int vangTL = scanner.nextInt();
+        int bacTL = scanner.nextInt();
+        int dongTL = scanner.nextInt();
+
+        int n = scanner.nextInt();
+
+        if(n==1){
+            int tong1 = (vangVN+bacVN+dongVN);
+            int tong2 = (vangTL+bacTL+dongTL);
+            if(tong1>tong2){
+                System.out.println("VN");
+            }
+            else if (tong1<tong2) {
+                System.out.println("TL");
+            }
+            else {
+                System.out.println("TIE");
+            }
+        } else if (n==2){
+            if(vangVN==vangTL && bacVN==bacTL && dongVN==dongTL){
+                System.out.println("TIE");
+            } else {
+                if(vangVN==vangTL && bacVN==bacTL){
+                    if(dongVN>dongTL){
+                        System.out.println("VN");
+                    }
+                    else{
+                        System.out.println("TL");
+                    }
+                }
+                else{
+                    if (vangVN == vangTL){
+                        if(bacVN>bacTL){
+                            System.out.println("VN");
+                        }
+                        else{
+                            System.out.println("TL");
+                        }
+                    }
+                    else{
+                        if(vangVN>vangTL){
+                            System.out.println("VN");
+                        }
+                        else{
+                            System.out.println("TL");
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            System.out.println("TIE");
+        }
+    }
+}
