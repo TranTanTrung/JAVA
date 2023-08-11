@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long T = scanner.nextLong();
+        long P = scanner.nextLong();
+        long C = scanner.nextLong();
+        if(T==1){
+            System.out.println(P*C);
+        }
+        else{
+            System.out.println(((P-1)/(2) + 1) * C);
+        }
+    }
+}
