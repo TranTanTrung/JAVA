@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long A = scanner.nextLong();
+        long B = scanner.nextLong();
+        long C = scanner.nextLong();
+        double denTa = Math.pow(B, 2) - (4 * A * C);
+        if(A==0 && B==0 && C==0){
+            System.out.print(-1);
+        } else if (A==0 && B==0) {
+            System.out.print(0);
+        } else if (A==0 && C==0) {
+            System.out.println(1);
+            String format = String.format("%.10f", 0.0);
+            System.out.print(format);
+        } else if (A==0) {
+            System.out.println(1);
+            double nghiem = -C / (double) B;
+            String format = String.format("%.10f",nghiem);
+            System.out.print(format);
+        } else if(denTa<0){
+            System.out.print(0);
+        } else if (denTa == 0) {
+            System.out.println(1);
+            double nghiemKep = -B/2*A;
+            String format = String.format("%.10f", nghiemKep);
+            System.out.print(format);
+        } else{
+            System.out.println(2);
+            double nghiem1 = ((-B + Math.sqrt(denTa))/ (double) 2*A);
+            double nghiem2 = ((-B - Math.sqrt(denTa))/ (double) 2*A);
+            if(nghiem1<nghiem2){
+                String format1 = String.format("%.10f", nghiem1);
+                String format2 = String.format("%.10f", nghiem2);
+                if(nghiem1==0){
+                    System.out.println("0.0000000000");
+                } else{
+                    System.out.println(format1);
+                }
+                if(nghiem2==0){
+                    System.out.print("0.0000000000");
+                } else {
+                    System.out.print(format2);
+                }
+            }
+            else{
+                String format1 = String.format("%.10f", nghiem1);
+                String format2 = String.format("%.10f", nghiem2);
+                if(nghiem2==0){
+                    System.out.println("0.0000000000");
+                } else{
+                    System.out.println(format2);
+                }
+                if(nghiem1==0){
+                    System.out.print("0.0000000000");
+                } else {
+                    System.out.print(format1);
+                }
+            }
+        }
+    }
+}
