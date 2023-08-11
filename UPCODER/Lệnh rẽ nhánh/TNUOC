@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soCongTo = scanner.nextInt();
+        long tienNuoc = 0;
+        if(soCongTo<=16){
+            tienNuoc = soCongTo * 7000;
+        } else if (soCongTo>=17 && soCongTo<=50) {
+            tienNuoc = 16 * 7000 + (soCongTo-16)*8500;
+        } else {
+            tienNuoc = 16 * 7000 + 34 * 8500 + (soCongTo - 50) * 100000;
+        }
+        System.out.print(tienNuoc);
+    }
+}
