@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen = scanner.nextInt();
+        int a = soNguyen/1000;
+        int b = (soNguyen/100)%10;
+        int c = (soNguyen/10)%10;
+        int d = soNguyen%10;
+        a = a*10 + d;
+        b = b*10 + c;
+        System.out.println(a + "+" + b + "=" + (a+b));
+    }
+}
