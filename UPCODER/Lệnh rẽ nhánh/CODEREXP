@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long coBan = scanner.nextLong();
+        long trungBinh = scanner.nextLong();
+        long nangCao = scanner.nextLong();
+        long kho = scanner.nextLong();
+        long diem = coBan*10 + trungBinh*20 + nangCao*30 + kho*40;
+        System.out.println(diem);
+        if (diem==0){
+            System.out.println("Coder So Sinh");
+        }
+        else if (diem>=1 && diem<=49){
+            System.out.println("Code Lop Mam");
+        }
+        else if (diem >=50 && diem<=99){
+            System.out.println("Coder Lop Choi");
+        }
+        else if (diem>=100 && diem<=499){
+            System.out.println("Coder Lop La");
+        }
+        else if (diem>=500 && diem<=999){
+            System.out.println("Coder Tieu Hoc");
+        }
+        else if (diem>=1000 && diem<=1499){
+            System.out.println("Coder THCS");
+        }
+        else if (diem>=1500 && diem<=1999){
+            System.out.println("Coder THPT");
+        }
+        else if (diem>=2000 && diem<=2499){
+            System.out.println("Coder Trung Cap");
+        }
+        else if (diem>=2500 && diem<=3499){
+            System.out.println("Coder Cao Dang");
+        }
+        else if (diem>=3500 && diem<=4199){
+            System.out.println("Coder Dai Hoc");
+        }
+        else if (diem>=4200 && diem<=5499){
+            System.out.println("Coder Thac Si");
+        }
+        else if (diem>=5500 && diem<=6999){
+            System.out.println("Coder Tien Si");
+        }
+        else{
+            System.out.println("Coder Giao Su");
+        }
+    }
+}
