@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int AB = scanner.nextInt();
+        int BC = scanner.nextInt();
+        int CA = scanner.nextInt();
+        int time = scanner.nextInt();
+        BC = BC + AB;
+        CA = CA + BC;
+        while(time >= CA){
+            time = time - CA;
+        }
+        if(time==0){
+            System.out.println("A");
+        } else if (time>0 && time<AB){
+            System.out.println("AB");
+        } else if (time==AB) {
+            System.out.println("B");
+        } else if (time<BC) {
+            System.out.println("BC");            
+        } else if (time==BC) {
+            System.out.println("C");
+        } else {
+            System.out.println("CA");
+        }
+    }
+}
