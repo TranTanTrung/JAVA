@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while(scanner.hasNextInt()){
+            int soNguyen = scanner.nextInt();;
+            int tong=0;
+            while (soNguyen>0){
+                tong+= (soNguyen%10);
+                soNguyen/=10;
+            }
+            System.out.println(tong);
+        }
+    }
+}
