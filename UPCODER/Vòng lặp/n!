@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen = scanner.nextInt();
+        int tich=1;
+        for(int i=1;i<=soNguyen;i++){
+            tich*=i;
+        }
+        System.out.println(tich);
+    }
+}
