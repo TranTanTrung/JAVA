@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double sum =0.0;
+        int dem = 0;
+        while(true){
+            int diem = scanner.nextInt();
+            if (diem==-1){
+                break;
+            }
+            sum += diem;
+            dem++;
+        }
+        double dtb = sum/dem;
+        if (dtb<4){
+            System.out.println("F");
+        } else {
+            if(dtb>=4 && dtb<5.5){
+                System.out.println("D");
+            } else {
+                if (dtb>=5.5 && dtb<7.0){
+                    System.out.println("C");
+                } else {
+                    if (dtb>=7.0 && dtb<8.5){
+                        System.out.println("B");
+                    } else {
+                        System.out.println("A");
+                    }
+                }
+            }
+        }
+    }
+}
