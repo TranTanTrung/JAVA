@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        double  tong=0;
+        double  sum=0.0;
         for(int i=1;i<=n;i++){
-            tong+= (1/(double)(Math.pow(i,n)));
+            double tmp = 1.0 / (Math.pow(i,3));
+            sum+=tmp;
         }
-        String format = String.format("%.3f", tong);
-        System.out.println(format);
+        double roundedSum = Math.round(sum*1000.0)/1000.0;
+
+        System.out.println(roundedSum);
     }
 }
