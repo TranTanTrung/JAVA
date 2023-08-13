@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int M = scanner.nextInt();;
+        int K = scanner.nextInt();
+        int sumN = 0;
+        while(N>0){
+            sumN+= (N%10);
+            N/=10;
+        }
+        int soMoiM = 0;
+        while(M>0){
+            soMoiM = soMoiM*10 + M%10;
+            M/=10;
+        }
+        if(sumN+soMoiM%10 == K){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
