@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen = scanner.nextInt();
+        String chuyenCoSo = Integer.toBinaryString(soNguyen);
+        System.out.println(chuyenCoSo);
+    }
+}
