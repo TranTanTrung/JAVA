@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    // CÁCH TÍNH BCNN ĐẦU TIÊN TÍNH UCLN SAU ĐÓ SỮ DỤNG CÔNG THỨC BCNN=(A*B)/UCLN;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyenA = scanner.nextInt();
+        int soNguyenB = scanner.nextInt();
+        System.out.println(BCNN(soNguyenA, soNguyenB));
+    }
+    public static int UCLN (int a, int b){
+        while(a*b!=0){
+            if(a>b){
+                a%=b;
+            } else {
+                b%=a;
+            }
+        }
+        return a+b;
+    }
+    public static int BCNN (int a, int b){
+        int tmp = UCLN(a,b);
+        return (a*b)/tmp;
+    }
+}
