@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long songuyenA = scanner.nextLong();
+        long soNguyenB = scanner.nextLong();
+        if(UCLN(songuyenA, soNguyenB)==1){
+            System.out.print("yes");
+        } else {
+            System.out.print("no");
+        }
+    }
+    public static long UCLN (long a, long b){
+        while(a*b!=0){
+            if(a>b){
+                a%=b;
+            } else {
+                b%=a;
+            }
+        }
+        return a+b;
+    }
+}
