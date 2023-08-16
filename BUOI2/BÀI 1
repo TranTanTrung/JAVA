@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình nhập vào n số nguyên và xuất các giá trị của mảng, tìm min, tìm max
+        Scanner scanner = new Scanner(System.in);
+        int soNguyenN = scanner.nextInt();
+        int[] array = new int[100];
+        for(int i=0;i<soNguyenN;i++){
+            int soNhap = scanner.nextInt();
+            array[i] = soNhap;
+        }
+        for(int i=0;i<soNguyenN;i++){
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<soNguyenN;i++){
+            if(max<array[i]){
+                max=array[i];
+            }
+            if(min>array[i]){
+                min=array[i];
+            }
+        }
+        System.out.println("Giá trị max chủa mảng là: " + max);
+        System.out.println("Giá trị min của mảng là: " + min);
+    }
+}
