@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Tìm và in ra màn hình số lượng số nguyên lẻ, số lượng số nguyên chẵn trong mảng.
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[100];
+        int soLuong = scanner.nextInt();
+        for(int i=0;i<soLuong;i++){
+            int soNhap = scanner.nextInt();
+            array[i] = soNhap;
+        }
+        int demSoChan=0;
+        for(int i=0;i<soLuong;i++){
+            if(array[i]%2==0){
+                demSoChan++;
+            }
+        }
+        System.out.println("Tổng số chẵn trong mảng: " + demSoChan);
+        System.out.print("Số chẵn trong mảng là: ");
+        for(int i=0;i<soLuong;i++){
+            if(array[i]%2==0){
+                System.out.print(array[i] + " ");
+            }
+        }
+        System.out.println();
+        int demSoLe=0;
+        for(int i=0;i<soLuong;i++){
+            if(array[i]%2!=0){
+                demSoLe++;
+            }
+        }
+        System.out.println("Tổng số lẽ trong mảng: " + demSoLe);
+        System.out.print("Số lẽ trong mảng là: ");
+        for(int i=0;i<soLuong;i++){
+            if(array[i]%2!=0){
+                System.out.print(array[i] + " ");
+            }
+        }
+    }
+}
