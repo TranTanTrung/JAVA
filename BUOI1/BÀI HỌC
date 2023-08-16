@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /*
+        sytax: Kieu tenBien = gia tri;
+        *//*
+        String chuoi = "Hello k22";
+        int a=100;
+        long soLong = 100L;
+
+        double soThuc = 0.5;
+        float soThucFloat = 0.5f;
+
+        boolean isPass = true;
+
+        System.out.println("TRUNG có đậu không? " + !isPass);
+        System.out.println("Đây là số nguyên a: " + (a + soThuc));
+        System.out.println("Đây là số thực: " + soThuc);
+        System.out.println(a + " " + soThuc);
+        System.out.println(*//*"Hello world!"*//* chuoi);*/
+
+        /*  Nhập xuất
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type in your age");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Type in your name");
+        String name = scanner.nextLine();
+
+        System.out.println("Type in your class");
+        String clazz = scanner.nextLine();
+
+        System.out.println("Your info: Name: " + name + " Age: " + age + " class: " + clazz);*/
+
+
+        /*// CÂU ĐIỀU KIỆN
+        boolean isMale = true;
+        int grade = 1;
+
+        if (isMale){
+            System.out.println("So 1");
+        }
+        if (!isMale *//* isMale == false *//*){
+            System.out.println("So 2");
+        }
+
+        // switch case
+        switch (grade){
+            case 1:
+                System.out.println("So 1");
+                break;
+            case 2:
+                System.out.println("So 2");
+                break;
+            default:
+        }*/
+
+        /*//VÒNG LẶP (LOOP)
+        //FOR
+        for(int i=0;i<=10;i++){
+            System.out.println("So: " + i);
+        }
+        //WHILE
+        int n=0;
+        while (n<=10){
+            System.out.println("So: "+n);
+            n++;
+        }
+
+        //MẢNG
+        int[] numbers = new int[10];
+        numbers[0] = 2;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(numbers[i]);
+        }*/
+        
+    }
+}
