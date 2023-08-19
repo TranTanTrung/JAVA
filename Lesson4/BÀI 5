@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình cho người dùng xóa 1 phần tử bất kỳ trong danh sách
+        Scanner scanner = new Scanner(System.in);
+        LinkedList<Integer> list = new LinkedList<Integer>();
+        int viTriDelete = scanner.nextInt();
+        while(true){
+            int soNguyen = scanner.nextInt();
+            if(soNguyen==-1){
+                break;
+            }
+            list.add(soNguyen);
+        }
+        list.remove(viTriDelete);
+        for(int i: list){
+            System.out.print(i + " ");
+        }
+    }
+}
