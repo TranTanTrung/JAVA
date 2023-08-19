@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //Viết chương trình sắp xếp danh sách theo thứ tự giảm dần
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        while(true){
+            int soNguyen = scanner.nextInt();
+            if(soNguyen==-1){
+                break;
+            }
+            list.add(soNguyen);
+        }
+        sort(list);
+    }
+    public static void sort(List<Integer> list){
+        for(int i=0;i< list.size();i++){
+            for(int j=0;j< list.size();j++){
+                if(list.get(i) > list.get(j)){
+                    int tmp= list.get(i);
+                    list.set(i, list.get(j));
+                    list.set(j, tmp);
+                }
+            }
+        }
+        for(int i: list){
+            System.out.print(i + " ");
+        }
+    }
+}
