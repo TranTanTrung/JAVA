@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int max = -9999;
+        while(scanner.hasNextInt()){
+            int soNguyen = scanner.nextInt();
+            if(soNguyen>max){
+                max=soNguyen;
+            }
+        }
+        System.out.print(max);
+    }
+}
