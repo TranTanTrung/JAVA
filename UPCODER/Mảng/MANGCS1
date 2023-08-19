@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int viTriThem = scanner.nextInt();
+        int giaTriThem = scanner.nextInt();
+        LinkedList<Integer> list = new LinkedList<Integer>();
+        while(scanner.hasNextInt()){
+            int soNguyen = scanner.nextInt();
+            list.add(soNguyen);
+        }
+        list.add(viTriThem, giaTriThem);
+        for(int i=0;i< list.size();i++){
+            System.out.print(list.get(i) + " ");
+        }
+    }
+}
