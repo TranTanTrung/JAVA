@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyenK = scanner.nextInt();
+        int tmp=0, dem=0;
+        while(scanner.hasNextInt()){
+            int soNguyen = scanner.nextInt();
+            if(checkSoNguyenTo(soNguyen)==true && soNguyen>tmp && soNguyen<=soNguyenK){
+                tmp=soNguyen;
+                dem++;
+            }
+        }
+        if(dem==0){
+            System.out.print(-1);
+        } else {
+            System.out.print(tmp);
+        }
+    }
+    public static boolean checkSoNguyenTo(int n){
+        if(n<2){
+            return false;
+        } else {
+            if(n==2){
+                return true;
+            } else {
+                for(int i=2;i<=Math.sqrt(n);i++){
+                    if(n%i==0){
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+}
