@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner =  new Scanner(System.in);
+        int[] array = new int[100];
+        int soNguyenK = scanner.nextInt();
+        for(int i=0;i<soNguyenK;i++){
+            int soNguyen = scanner.nextInt();
+            array[i] = soNguyen;
+        }
+        int sum=0;
+        for(int i=0;i<soNguyenK;i++){
+            if(checkSoCHinhPhuong(array[i])==true){
+                sum += array[i];
+            }
+        }
+        System.out.print(sum);
+    }
+    public static boolean checkSoCHinhPhuong(int n){
+        double tmp = Math.sqrt(n);
+        tmp=(int)tmp;
+        if(tmp*tmp==n){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
