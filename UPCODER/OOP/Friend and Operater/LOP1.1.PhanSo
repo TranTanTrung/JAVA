@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+class ps {
+    private int tuSo, mauSo;
+    public ps (int tuSo, int mauSo) {
+        this.tuSo = tuSo;
+        this.mauSo = mauSo;
+    }
+    public void input() {
+        Scanner scanner = new Scanner(System.in);
+        tuSo = scanner.nextInt();
+        mauSo = scanner.nextInt();
+        scanner.close();
+    }
+    public void output() {
+        System.out.print(tuSo + "/" + mauSo);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ps p = new ps(0, 1);
+        p.input();
+        p.output();
+    }
+}
