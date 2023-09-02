@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+class ps {
+    private int tuSo, mauSo;
+   public ps (int tuSo, int mauSo){
+        this.tuSo=tuSo;
+        this.mauSo=mauSo;
+    }
+    public ps(ps p){
+       tuSo=p.tuSo;
+       mauSo=p.mauSo;
+    }
+
+    public int getTuSo() {
+        return tuSo;
+    }
+
+    public void setTuSo(int tuSo) {
+        this.tuSo = tuSo;
+    }
+
+    public int getMauSo() {
+        return mauSo;
+    }
+
+    public void setMauSo(int mauSo) {
+        this.mauSo = mauSo;
+    }
+    public int ucln (int a, int b){
+       while(a*b!=0){
+           if(a>b){
+               a%=b;
+           } else {
+               b%=a;
+           }
+       }
+       return a+b;
+    }
+    public ps rutGon(){
+       int a = ucln(tuSo, mauSo);
+       this.tuSo = tuSo/a;
+       this.mauSo = mauSo/a;
+       return this;
+    }
+    public ps sum(ps p){
+       ps kq = new ps(0,1);
+       kq.tuSo = tuSo*p.mauSo + p.tuSo*mauSo;
+       kq.mauSo = mauSo*p.mauSo;
+       return kq.rutGon();
+    }
+    public void output(){
+       if(mauSo==0){
+           System.out.println("-1");
+       } else {
+           System.out.println(tuSo + "/" + mauSo);
+       }
+    }
+    public ps input(){
+       Scanner scanner = new Scanner(System.in);
+       tuSo = scanner.nextInt();
+       mauSo = scanner.nextInt();
+       ps psInput = new ps(tuSo, mauSo);
+       return psInput;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ps pSum = new ps(0, 1);
+        while(scanner.hasNext()){
+            int tuSo = scanner.nextInt();
+            int mauSo = scanner.nextInt();
+            ps p = new ps(tuSo, mauSo);
+            pSum = pSum.sum(p);
+        }
+        pSum.rutGon().output();
+    }
+}
