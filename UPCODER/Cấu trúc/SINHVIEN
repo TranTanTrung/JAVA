@@ -1,0 +1,43 @@
+public class SinhVien {
+    private String hoTen;
+    private int namSinh;
+    private double dtb;
+    public SinhVien(String hoTen, int namSinh, double dtb){
+        this.hoTen =hoTen;
+        this.namSinh=namSinh;
+        this.dtb=dtb;
+    }
+    public SinhVien(SinhVien s){
+        hoTen=s.hoTen;
+        namSinh=s.namSinh;
+        dtb=s.dtb;
+    }
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public int getNamSinh() {
+        return namSinh;
+    }
+
+    public void setNamSinh(int namSinh) {
+        this.namSinh = namSinh;
+    }
+
+    public double getDtb() {
+        return dtb;
+    }
+
+    public void setDtb(double dtb) {
+        this.dtb = dtb;
+    }
+
+    public void outPut(){
+        System.out.println(hoTen + " " + namSinh + " " + dtb);
+    }
+}
