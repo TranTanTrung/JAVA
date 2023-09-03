@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNguyen = scanner.nextInt();
+        if(soNguyen<=999){
+            System.out.println(-1);
+        } else {
+            int count =0;
+            while(soNguyen>0){
+                int tmp=soNguyen%10;
+                soNguyen/=10;
+                count++;
+                if(count==4){
+                    System.out.println(tmp);
+                    break;
+                }
+            }
+        }
+    }
+}
