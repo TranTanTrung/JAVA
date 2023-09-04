@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class PhanSo {
+    private int tuSo, mauSo;
+
+    public PhanSo(int tuSo, int mauSo){
+        this.mauSo=mauSo;
+        this.tuSo=tuSo;
+    }
+    public PhanSo(PhanSo p){
+        tuSo=p.tuSo;
+        mauSo=p.mauSo;
+    }
+    public void output(){
+        System.out.println(tuSo + "/" + mauSo);
+    }
+    public PhanSo sum(PhanSo p){
+        int tuSoKQ = tuSo*p.mauSo + p.tuSo*mauSo;
+        int mauSoKQ = mauSo*p.mauSo;
+        return new PhanSo(tuSoKQ, mauSoKQ);
+    }
+    public boolean soSanhBang(PhanSo p){
+        return this.tuSo == p.tuSo && this.mauSo == p.mauSo;
+    }
+    public boolean soSanhKhac(PhanSo p){
+        return !soSanhBang(p);
+    }
+    int ucln(int a, int b){
+        while(a*b!=0){
+            if(a>b){
+                a%=b;
+            } else {
+                b%=a;
+            }
+        }
+        return a+b;
+    }
+    public PhanSo rutGon(){
+        int a = ucln(this.tuSo, this.mauSo);
+        int tuSoKQ = this.tuSo /a;
+        int mauSoKQ = this.mauSo/a;
+        return new PhanSo(tuSoKQ, mauSoKQ);
+    }
+    //operator!=
+    //operator==
+    //operator>>
+    //operator<<
+    //operator+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int tuSo1 = scanner.nextInt();
+        int mauSo1 = scanner.nextInt();
+        int tuSo2 = scanner.nextInt();
+        int mauSo2 = scanner.nextInt();
+        PhanSo p1 = new PhanSo(tuSo1, mauSo1);
+        PhanSo p2 = new PhanSo(tuSo2, mauSo2);
+        p1.sum(p2).rutGon().output();
+    }
+}
