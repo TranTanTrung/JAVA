@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soNGuyenA = scanner.nextInt();
+        int soNguyenB = scanner.nextInt();
+        System.out.print(ucln(soNGuyenA, soNguyenB) + " " + bcnn(soNguyenB, soNGuyenA));
+    }
+    public static int ucln(int a, int b){
+        while(a*b!=0){
+            if(a>b){
+                a%=b;
+            } else {
+                b%=a;
+            }
+        }
+        return a+b;
+    }
+    public static int bcnn(int a, int b){
+        return (a*b) / ucln(a,b);
+    }
+}
