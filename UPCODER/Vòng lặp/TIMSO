@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        for (int i=100; i<=999; i++){
+            int hangTram = i/100;
+            int hangChuc = (i%100)/10;
+            int hangDonVi = i%10;
+            if(hangChuc==hangDonVi+3 && hangDonVi==hangTram+6){
+                int soMoi = (hangTram*100) +(hangChuc*10) + 0 +hangDonVi;
+                if(soMoi>2250){
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+}
+//KẾT QUẢ LÀ 258
