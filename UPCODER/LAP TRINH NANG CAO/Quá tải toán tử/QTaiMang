@@ -1,0 +1,55 @@
+// CHẠY TRÊN INTEL THÌ RA CHẠY TRÊN UPCODER THÌ BỊ RUNTIME
+import java.util.Scanner;
+
+class MangMotChieu {
+    private int soLuong;
+    private int[] mang;
+
+    public MangMotChieu(int soLuong, int[] mang) {
+        this.soLuong = soLuong;
+        this.mang =mang;
+    }
+
+    public void input(){
+        Scanner scanner = new Scanner(System.in);
+        soLuong = scanner.nextInt();
+        mang = new int[soLuong];
+        for(int i=0; i<soLuong;i++){
+            mang[i] = scanner.nextInt();
+        }
+    }
+    public void output(){
+        for(int i=0;i<soLuong;i++){
+            System.out.println(mang[i]);
+        }
+    }
+    public boolean soSanhBang(MangMotChieu m){
+        if(soLuong!=m.soLuong){
+            return false;
+        } else {
+            for(int i=0;i<soLuong;i++){
+                if(mang[i] != m.mang[i]){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public boolean soSanhKhac(MangMotChieu m){
+        return !soSanhBang(m);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MangMotChieu arr1 = new MangMotChieu(0, null);
+        arr1.input();
+        MangMotChieu arr2 = new MangMotChieu(0, null);
+        arr2.input();
+        if(arr1.soSanhBang(arr2)){
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+    }
+}
