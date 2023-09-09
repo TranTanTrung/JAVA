@@ -1,4 +1,6 @@
-public class SinhVien {
+import java.util.*;
+
+class SinhVien {
     private String hoTen;
     private int namSinh;
     private double dtb;
@@ -39,5 +41,45 @@ public class SinhVien {
 
     public void outPut(){
         System.out.println(hoTen + " " + namSinh + " " + dtb);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double maxDTB = Double.MIN_VALUE;
+        double minDTB = Double.MAX_VALUE;
+        List<SinhVien> danhSachSinhVien = new LinkedList<>();
+        while (scanner.hasNext()) {
+            String hoTen = scanner.next();
+            int namSinh = scanner.nextInt();
+            scanner.nextLine();
+            double dtb = scanner.nextDouble();
+            scanner.nextLine();
+            if (dtb > maxDTB) {
+                maxDTB = dtb;
+            }
+            if (dtb < minDTB) {
+                minDTB = dtb;
+            }
+            SinhVien sv = new SinhVien(hoTen, namSinh, dtb);
+            danhSachSinhVien.add(sv);
+        }
+        int dem=1;
+        for (int i=0;i< danhSachSinhVien.size();i++) {
+            if (danhSachSinhVien.get(i).getNamSinh() == maxDTB) {
+                System.out.println("#" + dem);
+                dem++;
+                danhSachSinhVien.get(i).outPut();
+            }
+        }
+        dem=1;
+        for (int i=0;i< danhSachSinhVien.size();i++) {
+            if (danhSachSinhVien.get(i).getNamSinh() == minDTB) {
+                System.out.println("#" + dem);
+                dem++;
+                danhSachSinhVien.get(i).outPut();
+            }
+        }
     }
 }
