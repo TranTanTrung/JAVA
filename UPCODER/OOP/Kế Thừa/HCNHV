@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class HCN {
+    private int chieuDai, chieuRong;
+
+    public HCN(int chieuDai, int chieuRong) {
+        this.chieuDai = chieuDai;
+        this.chieuRong = chieuRong;
+    }
+    public HCN(HCN hcn) {
+        chieuRong = hcn.chieuRong;
+        chieuDai = hcn.chieuDai;
+    }
+    public int chuVi() {
+        return 2 * (chieuRong + chieuDai);
+    }
+    public int dienTich() {
+        return chieuDai * chieuRong;
+    }
+    public boolean lonHon(HCN hcn) {
+        return chuVi() > hcn.chuVi();
+    }
+}
+
+class HV extends HCN {
+    public HV (int canh) {
+        super(canh, canh);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String loaiHinh = scanner.next();
+        int maxChuVi = Integer.MIN_VALUE;
+        if (loaiHinh.equals("HCN")) {
+            while (scanner.hasNext()) {
+                int chieuDai = scanner.nextInt();
+                int chieuRong = scanner.nextInt();
+                HCN hcn = new HCN(chieuDai, chieuRong);
+                if (hcn.chuVi() > maxChuVi) {
+                    maxChuVi = hcn.chuVi();
+                }
+            }
+        } else if (loaiHinh.equals("HV")) {
+            while (scanner.hasNext()) {
+                int canh = scanner.nextInt();
+                HV hv = new HV(canh);
+                if (hv.chuVi() > maxChuVi) {
+                    maxChuVi = hv.chuVi();
+                }
+            }
+        }
+        System.out.print(maxChuVi);
+    }
+}
