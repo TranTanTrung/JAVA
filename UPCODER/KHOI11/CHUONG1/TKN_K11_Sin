@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double bienA = scanner.nextDouble();
+        double bienX = scanner.nextDouble();
+        double bienS = (bienA + Math.sin(bienX)) / (Math.sqrt((bienA*bienA) + (bienX*bienX) + 1));
+        System.out.println((double) Math.round(bienS * 1000000) / 1000000);
+    }
+}
