@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double soNguyenX = scanner.nextDouble();
+        double ketQua = (double) Math.sqrt(soNguyenX + Math.sqrt(soNguyenX + Math.sqrt(soNguyenX)));
+        System.out.println((double) Math.round(ketQua*100000)/100000);
+    }
+}
