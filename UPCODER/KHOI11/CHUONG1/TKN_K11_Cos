@@ -5,6 +5,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         double soNguyenX = scanner.nextDouble();
         double ketQua = ((Math.abs(2*soNguyenX + 3)) / Math.cos(soNguyenX)) + Math.sqrt(2 + Math.cos(soNguyenX));
-        System.out.println((double) Math.round(ketQua*100)/100);
+        System.out.println(ketQua);
     }
 }
