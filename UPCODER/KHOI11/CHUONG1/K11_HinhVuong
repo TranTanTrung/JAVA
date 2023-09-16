@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double dienTich = scanner.nextDouble();
+        if(dienTich<0){
+            System.out.println("NHAP SAI");
+        } else {
+            System.out.println(Math.sqrt(dienTich));
+        }
+    }
+}
