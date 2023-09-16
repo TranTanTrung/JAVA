@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double soThucX = scanner.nextDouble();
+        double ketQua = Math.sqrt((2 * soThucX) - 5);
+        if(soThucX<2.5){
+            System.out.println("NHAP SAI");
+        } else {
+            System.out.println((double) Math.round(ketQua*100000)/100000);
+        }
+    }
+}
